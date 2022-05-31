@@ -1,4 +1,5 @@
 @import url(./header.css);
+@import url(./carousel.css);
 
 :root{
     --max-width-container: 1200px;

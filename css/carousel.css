@@ -1,0 +1,9 @@
+.carousel-container{
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+
+.carousel, .carousel-inner > .carousel-item > .d-block{
+    max-height: 700px;
+    max-width: auto;
+}
