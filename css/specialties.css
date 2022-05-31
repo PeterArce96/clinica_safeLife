@@ -1,0 +1,89 @@
+.specialties{
+    padding: 0 0 3rem;
+    
+}
+.specialties-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+}
+.specialties__title{
+    text-shadow: 0 0 0.25rem var(--primary-highlight);
+    font-weight: 700;
+}
+.specialties__specialties-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+.specialties__specialties-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: beige;
+    box-shadow: 0 0 0 0.125rem #62ccfb,
+                0 0 0 0.25rem #62ccfb;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.specialties__specialties-item:hover{
+    box-shadow: 0 0 0 0.25rem var(--primary-highlight),
+                0 0 0.5rem 0 var(--secondary-highlight),
+                0 0 0.75rem 0 var(--secondary-highlight);
+    transform: scale(1.05);
+    transition: var(--all-transitions);
+}
+.specialties__item-image-container{
+    display: flex;
+    width: 100%;
+    max-height: 190px;
+    margin: 0;
+}
+.specialties__item-image{
+    width: 100%;
+    
+}
+.specialties__item-data{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+.specialties__item-data-title{
+    text-shadow: 0 0 0.125rem var(--primary-highlight);
+    margin: 0;
+}
+.specialties__item-data-about{
+    margin: 0;
+}
+.specialties__item-button-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+}
+.specialties__item-button{
+    font-weight: 700;
+    background-color: #62ccfb;
+    border: 0.0625 solid var(--button-color);
+    border-radius: var(--border-radius);
+    padding: 0.5em 1em;
+    color: var(--button-text-color);
+    text-decoration: none;
+    transition: var(--all-transitions);
+}
+.specialties__item-button:hover{
+    background-color: var(--button-color-active);
+}
+@media(min-width:854px){
+    .specialties__specialties-list{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+}

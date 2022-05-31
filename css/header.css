@@ -37,7 +37,7 @@ header-nav_menu-link--active{
     font-size: 2rem;
     cursor: pointer;
     position: relative;
-    top: 5px;
+    top: 1px;
     transition: var(--all-transitions);
 }
 .header-nav__menu-icon-label:hover{

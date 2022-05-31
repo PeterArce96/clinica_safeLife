@@ -8,6 +8,8 @@
 }
 .about__title{
     font-weight: 700;
+    text-align: center;
+    margin: 0 0 2rem;
 }
 .about__description-container{
     display: flex;
@@ -15,7 +17,7 @@
 }
 .about__description-p{
     text-align: justify;
-    font-size: 18px;
+    font-size: 1rem;
 }
 .about__description-img{
     width: 100%;
@@ -37,6 +39,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+    }
+    .about__title{
+        font-weight: 700;
+        text-align: left;
+    }
+    .about__description-p{
+        font-size: 18px;
     }
     .about__description-img{
         position: relative;
