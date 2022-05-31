@@ -1,0 +1,15 @@
+@import url(./header.css);
+
+:root{
+    --max-width-container: 1200px;
+    --padding-section: 3rem 0;
+    --padding-container: 0 2em;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+}
+
+
+.body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
