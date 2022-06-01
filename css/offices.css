@@ -1,43 +1,52 @@
 .offices{
-    padding: 0 0 3rem;
+    padding: 5rem 0 5rem;
 }
 .offices-container{
     max-width: var(--max-width-container);
     padding: var(--padding-container);
     margin: auto;
+    color: var(--text-color);
 }
 .offices__title{
     text-align: center;
     font-weight: 700;
     margin: 0 0 2rem;
+    text-shadow: 0 0 0.125rem var(--shadow-color-primary),
+    0 0 0.5rem var(--shadow-color-primary);
 }
 .offices__offices-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: beige;
+    background-color: var(--background-color-primary);
     border-radius: var(--border-radius);
     overflow: hidden;
+    padding: 2rem;
 }
 .offices__offices-list{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 2rem 0 0;
     list-style: square;
 }
 .offices__offices-item{
     font-size: 1.125rem;
-    color: black;
 }
 .offices__offices-map-container{
     width: 100%;
     height: 300px;
+    transition: var(--all-transitions);
+}
+.offices__offices-map-container:hover{
+    box-shadow: 0 0 0 0.125rem var(--shadow-color-primary),
+                0 0 0 0.25rem var(--shadow-color-primary);
+    border-radius: var(--border-radius);
 }
 .offices__offices-map{
     width: 100%;
     height: 100%;
+    border-radius: var(--border-radius);
 }
 @media(min-width:854px){
     .offices__offices-container{

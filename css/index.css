@@ -5,15 +5,20 @@
 @import url(./offices.css);
 
 :root{
+    --shadow-color-primary:  #62ccfb;
+    --background-color-primary: #e1e2e7;
+    --background-color-secondary: #fff;
     --max-width-container: 1200px;
-    --padding-section: 3rem 0;
+    --padding-section: 5rem 0 0;
     --padding-container: 0 2em;
     --border-radius: 0.5rem;
     --all-transitions: all 0.25s;
+    --text-color: #000;
 }
 
 
 .body{
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
+    background-color: var(--background-color-secondary);
 }

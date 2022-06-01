@@ -1,3 +1,31 @@
+@keyframes slide {
+    0%{
+        transform: translateX(0)
+    }
+    25%{
+        transform: translateX(50px)
+    }
+    50%{
+        transform: translateX(0)
+    }
+    75%{
+        transform: translateX(-50px)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
+@keyframes slideDesktop{
+    0%{
+        transform: translateX(0)
+    }
+    50%{
+        transform: translateX(320px)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
 .about{
     padding: var(--padding-section);
 }
@@ -5,11 +33,15 @@
     padding:var(--padding-container);
     max-width: var(--max-width-container);
     margin: auto;
+    color: var(--text-color);
 }
 .about__title{
     font-weight: 700;
     text-align: center;
     margin: 0 0 2rem;
+    text-shadow: 0 0 0.125rem var(--shadow-color-primary),
+    0 0 0.5rem var(--shadow-color-primary);
+    animation: slide 4s linear infinite;
 }
 .about__description-container{
     display: flex;
@@ -21,13 +53,20 @@
 }
 .about__description-img{
     width: 100%;
+    transition: var(--all-transitions);
+    box-shadow: 0 0 0 0.125rem var(--shadow-color-primary),
+                0 0 0 0.25rem var(--shadow-color-primary);
+    border-radius: var(--border-radius);
 }
-
 .about-accordeon{
     margin: 1rem 0;
 }
+.accordion-body{
+    background-color: var(--background-color-primary);
+}
 .accordeon-body__parrafo{
     text-align: justify;
+    color: var(--text-color);
 
 }
 .accordeon-body__values-item{
@@ -43,6 +82,10 @@
     .about__title{
         font-weight: 700;
         text-align: left;
+        animation-name: slideDesktop;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
     .about__description-p{
         font-size: 18px;

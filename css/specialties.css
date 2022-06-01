@@ -1,5 +1,5 @@
 .specialties{
-    padding: 0 0 3rem;
+    padding: var(--padding-section);
     
 }
 .specialties-container{
@@ -14,6 +14,9 @@
 .specialties__title{
     text-shadow: 0 0 0.25rem var(--primary-highlight);
     font-weight: 700;
+    text-shadow: 0 0 0.125rem var(--shadow-color-primary),
+    0 0 0.5rem var(--shadow-color-primary);
+    color: var(--text-color);
 }
 .specialties__specialties-list{
     display: grid;
@@ -24,16 +27,18 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    background-color: beige;
-    box-shadow: 0 0 0 0.125rem #62ccfb,
-                0 0 0 0.25rem #62ccfb;
-    border-radius: var(--border-radius);
+    background-color: var(--background-color-primary);
+    box-shadow: 0 0 0 0.125rem var(--shadow-color-primary),
+                0 0 0 0.25rem var(--shadow-color-primary);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     overflow: hidden;
+    color: var(--text-color);
 }
 .specialties__specialties-item:hover{
-    box-shadow: 0 0 0 0.25rem var(--primary-highlight),
-                0 0 0.5rem 0 var(--secondary-highlight),
-                0 0 0.75rem 0 var(--secondary-highlight);
+    box-shadow: 0 0 0 0.25rem var(--shadow-color-primary),
+                0 0 0.5rem 0  #1bff00,
+                0 0 0.75rem 0  #1bff00;
     transform: scale(1.05);
     transition: var(--all-transitions);
 }
@@ -69,7 +74,7 @@
 }
 .specialties__item-button{
     font-weight: 700;
-    background-color: #62ccfb;
+    background-color: var(--shadow-color-primary);
     border: 0.0625 solid var(--button-color);
     border-radius: var(--border-radius);
     padding: 0.5em 1em;
