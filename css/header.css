@@ -41,12 +41,6 @@
     text-shadow: 0 0 0.25rem var(--primary-highlight),
     0 0 0.5rem var(--primary-highlight);
 }
-.header-nav__menu-icon-checkbox{
-    display: none;
-}
-.header-nav__menu-icon-checkbox:checked+.header-nav__menu-link-list {
-    left: 50%;
-}
 .header-nav__menu-link-list{
     position: fixed;
     top: 4rem;
