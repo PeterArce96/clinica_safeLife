@@ -11,6 +11,7 @@
     --text-color: #000;
     --primary-shadow-color: #2228;
     --secondary-shadow-color: #fff000;
+    --button-color-primary: #02b7ff;
     --max-width-container: 1200px;
     --padding-section: 5rem 0 0;
     --padding-container: 0 2em;
@@ -30,4 +31,7 @@
     --background-color-secondary: #383838;
     --text-color: #fff;
     --primary-shadow-color: #8888;
+}
+.main{
+    color: #87ceeb;
 }

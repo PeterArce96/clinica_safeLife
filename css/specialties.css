@@ -5,13 +5,13 @@
 .specialties-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 2rem;
     max-width: var(--max-width-container);
     margin: auto;
     padding: var(--padding-container);
 }
 .specialties__title{
+    text-align: center;
     font-weight: 700;
     text-shadow: 0 0 0.125rem var(--shadow-color-primary),
     0 0 0.5rem var(--shadow-color-primary);
@@ -36,8 +36,8 @@
 }
 .specialties__specialties-item:hover{
     box-shadow: 0 0 0 0.25rem var(--shadow-color-primary),
-                0 0 0.5rem 0  #1bff00,
-                0 0 0.75rem 0  #1bff00;
+                0 0 0.5rem 0  lawngreen,
+                0 0 0.75rem 0  lawngreen;
     transform: scale(1.05);
     transition: var(--all-transitions);
 }
@@ -73,19 +73,24 @@
     padding: 0 1rem 1rem;
 }
 .specialties__item-button{
-    font-weight: 700;
-    background-color: var(--shadow-color-primary);
-    border: 0.0625 solid var(--button-color);
+    font-weight: 600;
+    background-color: var(--button-color-primary);
+    border: 2px solid var(--secondary-shadow-color);
     border-radius: var(--border-radius);
     padding: 0.5em 1em;
-    color: var(--button-text-color);
+    color: black;
     text-decoration: none;
     transition: var(--all-transitions);
 }
 .specialties__item-button:hover{
-    background-color: var(--button-color-active);
+    background-color: var(--secondary-shadow-color);
+    border: 2px solid var(--button-color-primary);
+    color: black;
 }
 @media(min-width:854px){
+    .specialties__title{
+        text-align: left;
+    }
     .specialties__specialties-list{
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;

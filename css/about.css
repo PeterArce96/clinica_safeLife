@@ -46,6 +46,9 @@
 .about__description-container{
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color-primary);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
 }
 .about__description-p{
     text-align: justify;
@@ -67,7 +70,6 @@
 .accordeon-body__parrafo{
     text-align: justify;
     color: var(--text-color);
-
 }
 .accordeon-body__values-item{
     text-align: justify;
@@ -77,6 +79,8 @@
     .about__description-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin: 0 0 2rem;
         gap: 2rem;
     }
     .about__title{
@@ -91,8 +95,7 @@
         font-size: 18px;
     }
     .about__description-img{
-        position: relative;
-        top: -45px;
+        width: 100%;
     }
     .about-accordeon{
         margin: 0;
