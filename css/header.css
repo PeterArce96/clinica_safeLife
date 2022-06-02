@@ -110,6 +110,7 @@
 }
 .header-nav__menu-link-item{
     display: flex;
+    font-size: 1.125rem;
 }
 
 .header-nav_menu-link{
