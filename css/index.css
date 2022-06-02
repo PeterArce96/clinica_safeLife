@@ -8,12 +8,15 @@
     --shadow-color-primary:  #62ccfb;
     --background-color-primary: #e1e2e7;
     --background-color-secondary: #fff;
+    --text-color: #000;
+    --primary-shadow-color: #2228;
+    --secondary-shadow-color: #fff000;
     --max-width-container: 1200px;
     --padding-section: 5rem 0 0;
     --padding-container: 0 2em;
     --border-radius: 0.5rem;
     --all-transitions: all 0.25s;
-    --text-color: #000;
+    
 }
 
 
@@ -21,4 +24,10 @@
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     background-color: var(--background-color-secondary);
+}
+.body--dark {
+    --background-color-primary:  #2d2c2c;
+    --background-color-secondary: #383838;
+    --text-color: #fff;
+    --primary-shadow-color: #8888;
 }
