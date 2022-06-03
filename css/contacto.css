@@ -5,41 +5,48 @@
     margin: 0;
   }
 
+
 .informacion{
-    background-color: #A8A8A8;
+    background-color: #e1e2e7;
     display: grid;
-    padding: 2rem;
     justify-content: center;
-    margin-top: 2rem;
     gap: 1rem;
     border-radius: 5rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    
+    
 }
 .contact-info{
     text-align: center;
-    
     margin: auto;
+    padding: auto;
 }
 .container-contact{
     border: 0.5rem solid #62ccfb;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     margin: auto;
     padding: 2rem;
 }
+
 .list-tel{
+    
+    text-decoration: none;
     list-style: none;
     
 }
+.num-link{
+    text-decoration: none;
+    
+}
+
+
 .list-button{
     display: flex;
 }
 .contact__form{
-    width: 450px;
+    width: 350px;
     margin: auto;
     background: (0,0,0,0.4);
     padding: 10px 20px;
@@ -60,8 +67,8 @@
 .contact__title{
     font-weight: 700;
     text-shadow: 0 0 0.125rem #62ccfb,
-    0 0 0.5rem #62ccfb
-    ;
+    0 0 0.5rem #62ccfb;
+    text-align: center;
     
 }
 
@@ -141,12 +148,12 @@
 @media screen and (min-width: 1049px){
     .informacion{
         grid-template-columns: repeat(2, 30rem);
+        
         gap: 6rem;
-        
+       margin: 5rem;
+       margin-top: 2rem;
         
         
     }
-    .container-contact{
-        gap: 5rem;
-    }
+    
 }
