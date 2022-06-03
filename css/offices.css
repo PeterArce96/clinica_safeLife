@@ -21,6 +21,7 @@
     align-items: center;
     background-color: var(--background-color-primary);
     border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px var(--box-shadow-color);
     overflow: hidden;
     padding: 2rem;
 }
@@ -43,6 +44,7 @@
     box-shadow: 0 0 0 0.125rem var(--shadow-color-primary),
                 0 0 0 0.25rem var(--shadow-color-primary);
     border-radius: var(--border-radius);
+    overflow: hidden;
 }
 .offices__offices-map{
     width: 100%;

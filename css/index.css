@@ -12,6 +12,7 @@
     --primary-shadow-color: #2228;
     --secondary-shadow-color: #fff000;
     --button-color-primary: #02b7ff;
+    --box-shadow-color: #888888e7;
     --max-width-container: 1200px;
     --padding-section: 5rem 0 0;
     --padding-container: 0 2em;
@@ -31,4 +32,34 @@
     --background-color-secondary: #383838;
     --text-color: #fff;
     --primary-shadow-color: #8888;
+    --box-shadow-color: #000000cc;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0)
+    }
+    25%{
+        transform: translateX(50px)
+    }
+    50%{
+        transform: translateX(0)
+    }
+    75%{
+        transform: translateX(-50px)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
+@keyframes slideDesktop{
+    0%{
+        transform: translateX(0)
+    }
+    50%{
+        transform: translateX(320px)
+    }
+    100%{
+        transform: translateX(0)
+    }
 }
