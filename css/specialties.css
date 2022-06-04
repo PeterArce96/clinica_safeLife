@@ -76,6 +76,8 @@
     border: 4px 4px 0 solid var(--shadow-color-primary);
     border-bottom: none;
     overflow: hidden;
+    max-width: 356px;
+    max-height: 200px;
     cursor: pointer;
     transform: translateY(100px);
 }
@@ -99,6 +101,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 356px;
+    max-height: 200px;
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 0 5px 20px var(--box-shadow-color);

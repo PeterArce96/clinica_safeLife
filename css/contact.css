@@ -71,7 +71,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0 5px 20px var(--box-shadow-color);
     border-radius: var(--border-radius);
 }
@@ -86,7 +86,7 @@
 .contact__phones-list-link{
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1.250rem;
+    font-size: 1.125rem;
 }
 .contact__social-container{
     display: flex;
@@ -117,5 +117,8 @@
     }
     .contact__title{
         text-align: left;
+    }
+    .container_contact-phones-container{
+        padding: 2rem;
     }
 }

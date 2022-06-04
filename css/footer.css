@@ -1,0 +1,16 @@
+.footer{
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: 2rem;
+    text-shadow: 0 0 0.125rem var(--shadow-color-primary),
+    0 0 0.5rem var(--shadow-color-primary);
+}
+.link{
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    
+}
+.footer-bot{
+    color: var(--text-color);
+}
