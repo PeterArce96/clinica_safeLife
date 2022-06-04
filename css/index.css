@@ -3,6 +3,7 @@
 @import url(./about.css);
 @import url(./specialties.css);
 @import url(./offices.css);
+@import url(./contacto.css);
 
 :root{
     --shadow-color-primary:  #62ccfb;
