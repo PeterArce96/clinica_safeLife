@@ -76,6 +76,7 @@
     border: 4px 4px 0 solid var(--shadow-color-primary);
     border-bottom: none;
     overflow: hidden;
+    cursor: pointer;
     transform: translateY(100px);
 }
 
