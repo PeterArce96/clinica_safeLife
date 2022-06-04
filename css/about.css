@@ -20,7 +20,7 @@
     flex-direction: column;
     background-color: var(--background-color-primary);
     box-shadow: 0 5px 20px var(--box-shadow-color);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: var(--border-radius);
 }
 .about__description-p{

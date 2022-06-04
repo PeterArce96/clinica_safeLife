@@ -1,5 +1,5 @@
 .offices{
-    padding: 5rem 0 5rem;
+    padding: var(--padding-section);
 }
 .offices-container{
     max-width: var(--max-width-container);
