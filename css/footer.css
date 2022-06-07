@@ -9,7 +9,11 @@
     font-size: 1rem;
     color: var(--text-color);
     text-decoration: none;
+    transition: var(--all-transitions);
     
+}
+.link:hover{
+    color: var(--shadow-color-primary);
 }
 .footer-bot{
     color: var(--text-color);
