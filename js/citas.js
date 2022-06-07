@@ -1,21 +1,23 @@
 
 let URL_BASE="http://localhost:8082/";
 let idCita=0;
+let idPaciente=1;
 let myModal = new bootstrap.Modal(document.getElementById('modalCita'), {
     keyboard: false
   });
 
+const listaMedicos=[];
+const listaEspecialidades=[];
+
 const getFormData = () => {
-    const documentFormPokemon = document.forms['formPokemon'];
-    const id = documentFormPokemon['id'].value;
-    const nombre = documentFormPokemon['nombre'].value;
-    const tipo = documentFormPokemon['tipo'].value;
-    const hp = documentFormPokemon['hp'].value;
-    const ataque = documentFormPokemon['ataque'].value;
-    const especial = documentFormPokemon['especial'].value;
-    const urlImagen = documentFormPokemon['url-imagen'].value;
-  
-    return ({ id, nombre, tipo, hp, ataque, especial, urlImagen });
+    const documentformCita = document.forms['formCita'];
+    const id = documentformCita['id'].value;
+    const doctor = documentformCita['doctor'].value;
+    const especialidad = documentformCita['especialidad'].value;
+    const fecha = documentformCita['fecha'].value;
+    const hora = documentformCita['hora'].value;
+
+    return ({ id, doctor, especialidad, fecha, hora });
   };
 
 
@@ -29,7 +31,7 @@ const getCita= async (id)=>{
 
     const {doctor,especialidad,fechacita,hora}=data;
 
-    documentFormCita['id'].value='';
+    documentFormCita['id'].value=id;
     documentFormCita['doctor'].value=doctor.id;
     documentFormCita['especialidad'].value=especialidad.id;
     documentFormCita['fecha'].value=fechacita;
@@ -40,7 +42,8 @@ const getCita= async (id)=>{
 
 const calendario=(eventos)=>{
 
-    $('#calendar').fullCalendar({
+    $('#calendar').fullCalendar('destroy');
+   $('#calendar').fullCalendar({
         header: {
           left: 'prev,next today',
           center: 'title',
@@ -68,7 +71,7 @@ const calendario=(eventos)=>{
 const getCitas= async (idPaciente)=>{
 
    const eventos=[];
-   const res=  await fetch(`http://localhost:8082/cita/listar/${idPaciente}`);
+   const res=  await fetch(`${URL_BASE}cita/listar/${idPaciente}`);
    const t= await res.json();
    t.forEach(cita=>{
 
@@ -94,22 +97,63 @@ const deleteCita= async ()=>{
 
     console.log("eliminado correctamente");
 
-    getCitas(1); 
+    getCitas(idPaciente); 
+    myModal.hide();
+}
+
+const updateCita= async ()=>{
+
+    const {id,doctor,especialidad,fecha,hora} = getFormData();
+
+    const entity={
+        "id": 2,
+        "doctor": {
+            "id": doctor
+        },
+        "especialidad": {
+            "id": especialidad
+        },
+        "paciente": {
+            "id": idPaciente
+        },
+        "fechacita": fecha,
+        "hora": hora
+    };
+
+    let obj={
+        "id": 0,
+        "nombre": "miguel",
+        "apellido": "guevara",
+        "especialidad": "cirugia"
+    }
+
+
+    const resp= await fetch(`${URL_BASE}cita/editar`,
+    {
+         body: JSON.stringify(entity),
+        method: "PUT",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+    });
+
+    const content= await resp.json();
+    //console.log(content);
+    console.log("modificado correctamente");
+    getCitas(idPaciente); 
     myModal.hide();
 }
 
 $(document).ready(function() {
 
-    getCitas(1); 
+    getCitas(idPaciente); 
     
     const btnCerrarSesion=document.querySelector("#btnCerrarSesion");
     const btnModificar=document.querySelector("#btnModificar");
     const btnEliminar=document.querySelector("#btnEliminar");
 
-    btnModificar.addEventListener('click',()=>{
-
-
-    });
+    btnModificar.addEventListener('click',updateCita);
 
     btnEliminar.addEventListener('click',deleteCita);
 
