@@ -25,17 +25,17 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="email" class="fadeIn second" name="email" placeholder="correo electronico">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="contraseña">
-      <input type="button" class="fadeIn fourth" value="Iniciar Sesion" id="btnIniciarSesion">
+    <form id="frmLogin">
+      <input type="email" id="email" class="form-control w-75 m-auto" name="email" placeholder="correo electronico">
+      <input type="password" id="password" class="form-control w-75 m-auto my-3" name="password" placeholder="contraseña">
+      <input type="button" id="btnLogin" class="fadeIn fourth" value="Iniciar Sesion">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
 
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Registrarse
       </button>
     
@@ -50,34 +50,34 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="frmFormularioUsuario">
 
                     <div class="mb-3">
                       <label class="form-label">Correo Electronico</label>
-                      <input type="email" class="form-control" name="email">
+                      <input type="email" class="form-control" name="email_" required>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" name="password">
+                            <input type="password" class="form-control" name="password_" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label  class="form-label">Nombre</label>
-                            <input type="email" class="form-control"  name="nombre" >
+                            <input type="email" class="form-control"  name="nombre_" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label class="form-label">Apellido</label>
-                            <input type="email" class="form-control" name="apellido">
+                            <input type="email" class="form-control" name="apellido_" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label class="form-label">Edad</label>
-                            <input type="number" class="form-control" name="edad">
+                            <input type="number" class="form-control" name="edad_" required>
                         </div>
                     </div>
 
@@ -96,9 +96,9 @@
     </div>
     
 </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/login.js"></script>
 </body>
 </html>
 

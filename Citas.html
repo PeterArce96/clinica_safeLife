@@ -58,7 +58,7 @@
                 <!-- Left links -->
         
                 <div class="d-flex align-items-center">
-                <span class="me-4">Bienvenido: Miguel Guevara</span>
+                    Bienvenido: &nbsp; <span class="me-4" id="navNombreUsuario"> MIGUEL ANGEL GUEVARA ALEJANDRO</span>
                 <button type="button" class="btn btn-primary me-3" id="btnCerrarSesion">
                     Cerrar Sesion
                 </button>
@@ -139,12 +139,12 @@
         aria-labelledby="ex3-tab-2"
         >
 
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation" id="frmRegistroCita" novalidate>
 
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Doctor</label>
-                        <select class="form-control" name="doctor" required>
+                        <select class="form-control" name="doctor_" id="cmbDoctorRegistro" required>
                             <option value=""></option>
                         </select>
                         <div class="invalid-feedback">Selecciona un doctor.</div>
@@ -156,7 +156,7 @@
 
                     <div class="form-group">
                         <label for="">Especialidad</label>
-                        <select class="form-control" name="doctor" required>
+                        <select class="form-control" name="especialidad_" id="cmbEspecialidadRegistro" required>
                             <option value=""></option>
                         </select>
                         <div class="invalid-feedback">Selecciona una especialidad.</div>
@@ -168,7 +168,7 @@
 
                 <div class="col-md-4">
                     <div class="input-group form-outline">
-                        <input type="date" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                        <input type="date" class="form-control" name="fecha_" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
                         <label for="validationCustomUsername" class="form-label">Fecha</label>
                         <div class="invalid-feedback">Seleccione una fecha</div>
                     </div>
@@ -176,7 +176,7 @@
 
                 <div class="col-md-2">
                     <div class="form-outline">
-                        <input type="time" class="form-control" id="validationCustom03" required />
+                        <input type="time" class="form-control" name="hora_" id="validationCustom03" required />
                         <div class="invalid-feedback">Selecciona una hora</div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                 <hr/>
 
                 <div class="col-12">
-                    <button class="btn btn-primary"  type="submit"><i class="bi bi-save-fill"></i> &nbsp; GUARDAR</button>
+                    <button class="btn btn-primary" id="btnCrearCita"  type="button"><i class="bi bi-save-fill"></i> &nbsp; GUARDAR</button>
                 </div>
 
             </form>
@@ -204,18 +204,20 @@
 
                 <div class="row">
 
+                    <input type="text" class="form-control" id="txtIdUsuario" value="Mark" hidden />
+
                     <div class="col-md-6">
                         <div class="form-outline">
-                            <input type="text" class="form-control" id="validationCustom01" value="Mark" readonly />
-                            <label for="validationCustom01" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="txtNombreUsuario" value="Mark" readonly />
+                            <label for="txtNombreUsuario" class="form-label">Nombres</label>
                             <div class="valid-feedback">Looks good!</div>
                         </div>
                         </div>
     
                         <div class="col-md-6">
                             <div class="form-outline">
-                                <input type="text" class="form-control" id="validationCustom02" value="Otto" readonly />
-                                <label for="validationCustom02" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="txtApellidosUsuario" value="Otto" readonly />
+                                <label for="txtApellidosUsuario" class="form-label">Apellidos</label>
                                 <div class="valid-feedback">Looks good!</div>
                             </div>
                         </div>
@@ -226,8 +228,8 @@
 
                         <div class="col-2 mt-3">
                             <div class="form-outline">
-                                <input type="number" class="form-control" id="validationCustom03" readonly />
-                                <label for="validationCustom03" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="txtEdad" readonly />
+                                <label for="txtEdad" class="form-label">Edad</label>
                                 <div class="invalid-feedback">Please provide a valid city.</div>
                             </div>
                         </div>
@@ -235,8 +237,8 @@
                         <div class="col-md-10 mt-3">
                             <div class="input-group form-outline">
                                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" readonly />
-                                <label for="validationCustomUsername" class="form-label">Correo Electronico</label>
+                                <input type="text" class="form-control" id="txtCorreoElectronico" aria-describedby="inputGroupPrepend" readonly />
+                                <label for="txtCorreoElectronico" class="form-label">Correo Electronico</label>
                             </div>
                         </div>
                         
@@ -277,17 +279,13 @@
 
                     <div class="mb-3">
                       <label class="form-label">Doctor</label>
-                        <select name="doctor" class="form-control">
-                            <option value=""></option>
-                            <option value="1">Miguel Guevara</option>
+                        <select name="doctor" class="form-control" id="cmbDoctor">
                         </select>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label class="form-label">Especialidad</label>
-                            <select name="especialidad" class="form-control">
-                                <option value=""></option>
-                                <option value="2">Cardiologia</option>
+                            <select name="especialidad" class="form-control" id="cmbEspecialidad">
                             </select>
                         </div>
                     </div>
