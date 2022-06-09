@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
 
-   <title>Citas</title>
+    <title>Citas</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/plugins/standard/calendar.min.css">
+    <link rel="stylesheet"
+        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/plugins/standard/calendar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
+
 <body>
 
     <div class="container">
@@ -26,323 +29,281 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- Container wrapper -->
             <div class="container">
-            <!-- Navbar brand -->
-            <a class="navbar-brand me-2" href="https://mdbgo.com/">
-                <img
-                src="./img/logo.jpeg"
-                height="40"
-                alt="MDB Logo"
-                loading="lazy"
-                style="margin-top: -1px;"
-                />
-            </a>
-        
-            <!-- Toggle button -->
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#navbarButtonsExample"
-                aria-controls="navbarButtonsExample"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <i class="fas fa-bars"></i>
-            </button>
-        
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                </ul>
-                <!-- Left links -->
-        
-                <div class="d-flex align-items-center">
-                    Bienvenido: &nbsp; <span class="me-4" id="navNombreUsuario"> MIGUEL ANGEL GUEVARA ALEJANDRO</span>
-                <button type="button" class="btn btn-primary me-3" id="btnCerrarSesion">
-                    Cerrar Sesion
+                <!-- Navbar brand -->
+                <a class="navbar-brand me-2" href="#">
+                    <img src="./img/logo.jpeg" height="40" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
+                </a>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
                 </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+                    <!-- Left links -->
+
+                    <div class="d-flex align-items-center">
+                        Bienvenido: &nbsp; <span class="me-4" id="navNombreUsuario"> MIGUEL ANGEL GUEVARA
+                            ALEJANDRO</span>
+                        <button type="button" class="btn btn-primary me-3" id="btnCerrarSesion">
+                            Cerrar Sesion
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <!-- Collapsible wrapper -->
+                <!-- Collapsible wrapper -->
             </div>
             <!-- Container wrapper -->
         </nav>
         <!-- Navbar -->
 
-         <!-- Tabs navs -->
-    <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+        <!-- Tabs navs -->
+        <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
 
-        <li class="nav-item" role="presentation">
-        <a
-            class="nav-link active"
-            id="ex3-tab-1"
-            data-mdb-toggle="tab"
-            href="#ex3-tabs-1"
-            role="tab"
-            aria-controls="ex3-tabs-1"
-            aria-selected="true"
-            >CALENDARIO DE CITAS</a
-        >
-        </li>
-        <li class="nav-item" role="presentation">
-        <a
-            class="nav-link"
-            id="ex3-tab-2"
-            data-mdb-toggle="tab"
-            href="#ex3-tabs-2"
-            role="tab"
-            aria-controls="ex3-tabs-2"
-            aria-selected="false"
-            >NUEVA CITA</a
-        >
-        </li>
-        <li class="nav-item" role="presentation">
-        <a
-            class="nav-link"
-            id="ex3-tab-3"
-            data-mdb-toggle="tab"
-            href="#ex3-tabs-3"
-            role="tab"
-            aria-controls="ex3-tabs-3"
-            aria-selected="false"
-            >MI INFORMACION</a
-        >
-        </li>
-    </ul>
-    <!-- Tabs navs -->
-    
-    <!-- Tabs content -->
-    <div class="tab-content" id="ex2-content">
-        <div
-        class="tab-pane fade show active"
-        id="ex3-tabs-1"
-        role="tabpanel"
-        aria-labelledby="ex3-tab-1"
-        >
-        
-        <br/>
-        <div class="ui container">
-            <div class="ui grid">
-            <div class="ui sixteen column">
-                <div id="calendar"></div>
-            </div>
-            </div>
-        </div>
-        
-        </div>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="tab" href="#ex3-tabs-1" role="tab"
+                    aria-controls="ex3-tabs-1" aria-selected="true">CALENDARIO DE CITAS</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="ex3-tab-2" data-mdb-toggle="tab" href="#ex3-tabs-2" role="tab"
+                    aria-controls="ex3-tabs-2" aria-selected="false">NUEVA CITA</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="ex3-tab-3" data-mdb-toggle="tab" href="#ex3-tabs-3" role="tab"
+                    aria-controls="ex3-tabs-3" aria-selected="false">MI INFORMACION</a>
+            </li>
+        </ul>
+        <!-- Tabs navs -->
 
-        <div
-        class="tab-pane fade"
-        id="ex3-tabs-2"
-        role="tabpanel"
-        aria-labelledby="ex3-tab-2"
-        >
+        <!-- Tabs content -->
+        <div class="tab-content" id="ex2-content">
+            <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
 
-            <form class="row g-3 needs-validation" id="frmRegistroCita" novalidate>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="">Doctor</label>
-                        <select class="form-control" name="doctor_" id="cmbDoctorRegistro" required>
-                            <option value=""></option>
-                        </select>
-                        <div class="invalid-feedback">Selecciona un doctor.</div>
+                <br />
+                <div class="ui container">
+                    <div class="ui grid">
+                        <div class="ui sixteen column">
+                            <div id="calendar"></div>
+                        </div>
                     </div>
                 </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="form-group">
-                        <label for="">Especialidad</label>
-                        <select class="form-control" name="especialidad_" id="cmbEspecialidadRegistro" required>
-                            <option value=""></option>
-                        </select>
-                        <div class="invalid-feedback">Selecciona una especialidad.</div>
-                    </div>
-
-                </div>
-                
-                <hr/>
-
-                <div class="col-md-4">
-                    <div class="input-group form-outline">
-                        <input type="date" class="form-control" name="fecha_" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
-                        <label for="validationCustomUsername" class="form-label">Fecha</label>
-                        <div class="invalid-feedback">Seleccione una fecha</div>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="form-outline">
-                        <input type="time" class="form-control" name="hora_" id="validationCustom03" required />
-                        <div class="invalid-feedback">Selecciona una hora</div>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <div class="col-12">
-                    <button class="btn btn-primary" id="btnCrearCita"  type="button"><i class="bi bi-save-fill"></i> &nbsp; GUARDAR</button>
-                </div>
-
-            </form>
-
-        
-        </div>
-
-        <div
-        class="tab-pane fade"
-        id="ex3-tabs-3"
-        role="tabpanel"
-        aria-labelledby="ex3-tab-3"
-        >
-        <form class="row g-3 needs-validation " novalidate>
-
-            <div class="col-md-8">
-
-                <div class="row">
-
-                    <input type="text" class="form-control" id="txtIdUsuario" value="Mark" hidden />
-
-                    <div class="col-md-6">
-                        <div class="form-outline">
-                            <input type="text" class="form-control" id="txtNombreUsuario" value="Mark" readonly />
-                            <label for="txtNombreUsuario" class="form-label">Nombres</label>
-                            <div class="valid-feedback">Looks good!</div>
-                        </div>
-                        </div>
-    
-                        <div class="col-md-6">
-                            <div class="form-outline">
-                                <input type="text" class="form-control" id="txtApellidosUsuario" value="Otto" readonly />
-                                <label for="txtApellidosUsuario" class="form-label">Apellidos</label>
-                                <div class="valid-feedback">Looks good!</div>
-                            </div>
-                        </div>
-
-                </div>
-                  
-                    <div class="row">
-
-                        <div class="col-2 mt-3">
-                            <div class="form-outline">
-                                <input type="number" class="form-control" id="txtEdad" readonly />
-                                <label for="txtEdad" class="form-label">Edad</label>
-                                <div class="invalid-feedback">Please provide a valid city.</div>
-                            </div>
-                        </div>
-    
-                        <div class="col-md-10 mt-3">
-                            <div class="input-group form-outline">
-                                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control" id="txtCorreoElectronico" aria-describedby="inputGroupPrepend" readonly />
-                                <label for="txtCorreoElectronico" class="form-label">Correo Electronico</label>
-                            </div>
-                        </div>
-                        
-
-                    </div>
-
-                    
 
             </div>
-            <div class="col-md-4">
-                <div class="card ">
-                    <img src="https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_960_720.png" class="card-img-top" alt="Sunset Over the Sea"/>
-                  </div>
-            </div>
-        </form>
 
-        </div>
-    </div>
-    <!-- Tabs content -->
+            <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
 
-        </div>
+                <form class="row g-3 needs-validation" id="frmRegistroCita" novalidate>
 
-
-
-        <!-- Modal Cita-->
-
-      <div class="modal fade" id="modalCita" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Cita</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="formCita">
-
-                    <input type="text" class="form-control" name="id" hidden>
-
-                    <div class="mb-3">
-                      <label class="form-label">Doctor</label>
-                        <select name="doctor" class="form-control" id="cmbDoctor">
-                        </select>
-                    </div>
-                    <div class="mb-3">
+                    <div class="col-md-4">
                         <div class="form-group">
-                            <label class="form-label">Especialidad</label>
-                            <select name="especialidad" class="form-control" id="cmbEspecialidad">
+                            <label for="">Doctor</label>
+                            <select class="form-control" name="doctor_" id="cmbDoctorRegistro" required>
+                                <option value=""></option>
                             </select>
+                            <div class="invalid-feedback">Selecciona un doctor.</div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <div class="form-group">
-                                    <label  class="form-label">Fecha</label>
-                                    <input type="date" class="form-control"  name="fecha" >
-                                </div>
-                            </div>
+
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label for="">Especialidad</label>
+                            <select class="form-control" name="especialidad_" id="cmbEspecialidadRegistro" required>
+                                <option value=""></option>
+                            </select>
+                            <div class="invalid-feedback">Selecciona una especialidad.</div>
                         </div>
 
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <div class="form-group">
-                                    <label class="form-label">Hora</label>
-                                    <input type="time" class="form-control" name="hora">
-                                </div>
-                            </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="col-md-4">
+                        <div class="input-group form-outline">
+                            <input type="date" class="form-control" name="fecha_" id="validationCustomUsername"
+                                aria-describedby="inputGroupPrepend" required />
+                            <label for="validationCustomUsername" class="form-label">Fecha</label>
+                            <div class="invalid-feedback">Seleccione una fecha</div>
                         </div>
                     </div>
-                    
-                    
+
+                    <div class="col-md-2">
+                        <div class="form-outline">
+                            <input type="time" class="form-control" name="hora_" id="validationCustom03" required />
+                            <div class="invalid-feedback">Selecciona una hora</div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" id="btnCrearCita" type="button"><i class="bi bi-save-fill"></i>
+                            &nbsp; GUARDAR</button>
+                    </div>
+
+                </form>
 
 
-                  </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" id="btnModificar">Modificar</button>
-                <button type="button" class="btn btn-danger" id="btnEliminar">Eliminar</button>
-             
+
+            <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                <form class="row g-3 needs-validation " novalidate>
+
+                    <div class="col-md-8">
+
+                        <div class="row">
+
+                            <input type="text" class="form-control" id="txtIdUsuario" value="Mark" hidden />
+
+                            <div class="col-md-6">
+                                <div class="form-outline">
+                                    <input type="text" class="form-control" id="txtNombreUsuario" value="Mark"
+                                        readonly />
+                                    <label for="txtNombreUsuario" class="form-label">Nombres</label>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-outline">
+                                    <input type="text" class="form-control" id="txtApellidosUsuario" value="Otto"
+                                        readonly />
+                                    <label for="txtApellidosUsuario" class="form-label">Apellidos</label>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-2 mt-3">
+                                <div class="form-outline">
+                                    <input type="number" class="form-control" id="txtEdad" readonly />
+                                    <label for="txtEdad" class="form-label">Edad</label>
+                                    <div class="invalid-feedback">Please provide a valid city.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-10 mt-3">
+                                <div class="input-group form-outline">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="txtCorreoElectronico"
+                                        aria-describedby="inputGroupPrepend" readonly />
+                                    <label for="txtCorreoElectronico" class="form-label">Correo Electronico</label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card ">
+                            <img src="https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_960_720.png"
+                                class="card-img-top" alt="Sunset Over the Sea" />
+                        </div>
+                    </div>
+                </form>
+
             </div>
-          </div>
         </div>
-      </div>
+        <!-- Tabs content -->
+
+    </div>
+
+
 
     <!-- Modal Cita-->
-   
+
+    <div class="modal fade" id="modalCita" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Cita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCita">
+
+                        <input type="text" class="form-control" name="id" hidden>
+
+                        <div class="mb-3">
+                            <label class="form-label">Doctor</label>
+                            <select name="doctor" class="form-control" id="cmbDoctor">
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label class="form-label">Especialidad</label>
+                                <select name="especialidad" class="form-control" id="cmbEspecialidad">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label class="form-label">Fecha</label>
+                                        <input type="date" class="form-control" name="fecha">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label class="form-label">Hora</label>
+                                        <input type="time" class="form-control" name="hora">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/locale/es.js'></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="./js/citas.js"></script>
- 
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnModificar">Modificar</button>
+                    <button type="button" class="btn btn-danger" id="btnEliminar">Eliminar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cita-->
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/locale/es.js'></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="./js/citas.js"></script>
+
 
 </body>
+
 </html>
