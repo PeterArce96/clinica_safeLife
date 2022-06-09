@@ -1,0 +1,16 @@
+:root{
+    --shadow-color-primary:  #62ccfb;
+    --background-color-primary: #e1e2e7;
+    --background-color-secondary: #fff;
+    --text-color: #000;
+    --primary-shadow-color: #2228;
+    --secondary-shadow-color: #fff000;
+    --button-color-primary: #02b7ff;
+    --box-shadow-color: #888888e7;
+    --max-width-container: 1200px;
+    --padding-section: 5rem 0 0;
+    --padding-container: 0 2em;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+    
+}

@@ -7,10 +7,10 @@
   <title>Login</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
 
 </head>
-<body>
+<body class="body-login">
 
 <!------ Include the above in your HEAD tag ---------->
 
@@ -20,8 +20,8 @@
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="fadeIn first my-2">
-      <img src="./img/logo.jpeg" alt="logo" srcset="">
+    <div class="form__logo my-2">
+      <a href="./index.html"><img src="./img/logo.jpeg" alt="logo" class="form__logo-image"></a>
     </div>
 
     <!-- Login Form -->
@@ -65,13 +65,13 @@
                     <div class="mb-3">
                         <div class="form-group">
                             <label  class="form-label">Nombre</label>
-                            <input type="email" class="form-control"  name="nombre_" required>
+                            <input type="text" class="form-control"  name="nombre_" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-group">
                             <label class="form-label">Apellido</label>
-                            <input type="email" class="form-control" name="apellido_" required>
+                            <input type="text" class="form-control" name="apellido_" required>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -85,8 +85,8 @@
                   </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" id="btnRegistro">Registrarse</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success" id="btnRegistro">Registrarse</button>
             </div>
           </div>
         </div>
