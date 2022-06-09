@@ -97,9 +97,9 @@ const getFormData = () => {
   
       const resp= await fetch(`${URL_BASE}crear`,
       {
-           body: JSON.stringify(usuario),
-           method: "POST",
-           headers: {
+          body: JSON.stringify(usuario),
+          method: "POST",
+          headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             }
@@ -137,9 +137,9 @@ const getFormData = () => {
 
     const resp= await fetch(`${URL_BASE}acceso`,
     {
-         body: JSON.stringify(entity),
-         method: "POST",
-         headers: {
+        body: JSON.stringify(entity),
+        method: "POST",
+        headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           }
@@ -212,6 +212,6 @@ const getFormData = () => {
     btnRegistro.addEventListener('click',registroUsuario);
    // txtEmailregistro.addEventListener('blur',validarUsuarioRepetido);
     
- }
+  }
 
 document.addEventListener('DOMContentLoaded', documentReady);

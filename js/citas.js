@@ -31,7 +31,7 @@ const getMedicos= async ()=>{
         let nombreCompleto= nombre +" "+apellido;
         cmbDoctor.innerHTML += `<option value='${id}'>${nombreCompleto}</option>`;
         cmbDoctorRegistro.innerHTML += `<option value='${id}'>${nombreCompleto}</option>`;
-     });
+    });
 
 }
 
@@ -51,7 +51,7 @@ const getEspecialidades= async ()=>{
         const {id,nombre}=especialidad;
         cmbEspecialidad.innerHTML += `<option value='${id}'>${nombre}</option>`;
         cmbEspecialidadRegistro.innerHTML += `<option value='${id}'>${nombre}</option>`;
-     });
+    });
 
 }
 
@@ -61,7 +61,7 @@ const getUsuario= async (idUsuario)=>{
     const t= await res.json();
     
     const {id,usuario,paciente}=t;
-  
+
     const nombreCompleto=paciente.nombre+' '+paciente.apellido;
     document.querySelector("#navNombreUsuario").innerHTML=nombreCompleto.toUpperCase();
     
@@ -86,7 +86,7 @@ const getFormDataRegistro = () => {
     const fecha = documentformCitaRegistro['fecha_'].value;
     const hora = documentformCitaRegistro['hora_'].value;
 
-   /* let fecha_formateada = new Date(fecha);
+/* let fecha_formateada = new Date(fecha);
 
     let day = fecha_formateada.getDate()+2;
     let month = fecha_formateada.getMonth() + 1;
@@ -94,17 +94,17 @@ const getFormDataRegistro = () => {
 
     if(month < 10){
         fecha_formateada=`${year}-0${month}-${day}`;
-      }else{
+    }else{
         fecha_formateada=`${year}-${month}-${day}`;
-      }
+    }
     
     fecha=fecha_formateada;
     console.info(fecha_formateada);*/
     return ({ id, doctor, especialidad, fecha, hora });
 
-  };
+};
 
-  const resetFormDataRegistro = () => {
+const resetFormDataRegistro = () => {
 
     const documentformCitaRegistro = document.forms['frmRegistroCita'];
     documentformCitaRegistro['doctor_'].value='';
@@ -112,7 +112,7 @@ const getFormDataRegistro = () => {
     documentformCitaRegistro['fecha_'].value='';
     documentformCitaRegistro['hora_'].value='';
 
-  };
+};
 
 
 const getFormData = () => {
@@ -124,7 +124,7 @@ const getFormData = () => {
     const fecha = documentformCita['fecha'].value;
     const hora = documentformCita['hora'].value;
 
-   /* let fecha_formateada = new Date(fecha);
+/* let fecha_formateada = new Date(fecha);
 
     let day = fecha_formateada.getDate()+2;
     let month = fecha_formateada.getMonth() + 1;
@@ -132,26 +132,26 @@ const getFormData = () => {
 
     if(month < 10){
         fecha_formateada=`${year}-0${month}-${day}`;
-      }else{
+    }else{
         fecha_formateada=`${year}-${month}-${day}`;
-      }
+    }
     
     fecha=fecha_formateada;*/
 
     return ({ id, doctor, especialidad, fecha, hora });
 
-  };
+};
 
-  const validateForm = () => {
+const validateForm = () => {
     const documentformCitaRegistro = document.forms['frmRegistroCita'];
     const doctor = documentformCitaRegistro['doctor_'].value;
     const especialidad = documentformCitaRegistro['especialidad_'].value;
     const fecha = documentformCitaRegistro['fecha_'].value;
     const hora = documentformCitaRegistro['hora_'].value;
-  
+
     return [doctor.trim(), especialidad.trim(), fecha.trim(), hora.trim()].includes('');
-  };
-  
+};
+
 
 const getCita= async (id)=>{
 
@@ -173,12 +173,12 @@ const getCita= async (id)=>{
 
 const calendario=(eventos)=>{
 
-    $('#calendar').fullCalendar('destroy');
-   $('#calendar').fullCalendar({
+$('#calendar').fullCalendar('destroy');
+$('#calendar').fullCalendar({
         header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,basicWeek,basicDay'
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
         },
         locale: 'es',
         defaultDate: new Date(),//'2022-06-05',
@@ -187,24 +187,24 @@ const calendario=(eventos)=>{
         eventLimit: true, // allow "more" link when too many events
         events: eventos,
         
-          eventClick: function(info) {
-  
+        eventClick: function(info) {
+
             //console.log(idCita);
             idCita=info.id;
              // console.log(idCita);
-              getCita(info.id);
-              
-  
-          }
-      });
+            getCita(info.id);
+            
+
+        }
+    });
 }
 
 const getCitas= async (idPaciente)=>{
 
-   const eventos=[];
-   const res=  await fetch(`${URL_BASE}cita/listar/${idPaciente}`);
-   const t= await res.json();
-   t.forEach(cita=>{
+const eventos=[];
+const res=  await fetch(`${URL_BASE}cita/listar/${idPaciente}`);
+const t= await res.json();
+t.forEach(cita=>{
 
         const {fechacita,hora,especialidad,id} = cita;
         let title=especialidad.nombre+' - '+hora;
@@ -214,7 +214,7 @@ const getCitas= async (idPaciente)=>{
             "start":fechacita
         });
     });
- 
+
     calendario(eventos);
 }
 
@@ -238,7 +238,7 @@ const deleteCita=  ()=>{
             }
 
         });
- 
+
 }
 
 const updateCita= async ()=>{
@@ -264,12 +264,12 @@ const updateCita= async ()=>{
 
     const resp= await fetch(`${URL_BASE}cita/editar`,
     {
-         body: JSON.stringify(entity),
+        body: JSON.stringify(entity),
         method: "PUT",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-          },
+        },
     });
 
     const content= await resp.json();
@@ -286,8 +286,8 @@ const createCita= async ()=>{
 
         showAlert('danger', 'Completar todos los campos');
 
-      } else {
- 
+    } else {
+
         const entity={
             "id": id,
             "doctor": {
@@ -329,7 +329,7 @@ const createCita= async ()=>{
             } 
         });
 
-      }
+    }
 
 }
 
@@ -404,14 +404,14 @@ const documentReady = () => {
         });
 
 
-          
+        
 }
 
 document.addEventListener('DOMContentLoaded', documentReady);
 
 
- /*   {
-              id:4,
+/*   {
+            id:4,
             title: 'Click for Google',
             url: 'https://google.com/',
             start: '2022-06-28',
