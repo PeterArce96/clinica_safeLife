@@ -20,15 +20,17 @@
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="form__logo my-2">
+    <div class="form__logo my-3 mx-0">
       <a href="./index.html"><img src="./img/logo.jpeg" alt="logo" class="form__logo-image"></a>
     </div>
 
     <!-- Login Form -->
     <form id="frmLogin">
-      <input type="email" id="email" class="form-control w-75 m-auto" name="email" placeholder="correo electronico">
+      <input type="email" id="email" class="form-control w-75 m-auto" name="email" placeholder="correo electrónico">
       <input type="password" id="password" class="form-control w-75 m-auto my-3" name="password" placeholder="contraseña">
-      <input type="button" id="btnLogin" class="fadeIn fourth" value="Iniciar Sesion">
+      <div class="login__container">
+        <input type="button" id="btnLogin" class="login fadeIn fourth" value="Iniciar Sesion">
+      </div>
     </form>
 
     <!-- Remind Passowrd -->
@@ -46,14 +48,14 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Nuevo Usuario</h5>
+              <h5 class="modal-title" id="staticBackdropLabel">Registo de Usuario</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="frmFormularioUsuario">
 
                     <div class="mb-3">
-                      <label class="form-label">Correo Electronico</label>
+                      <label class="form-label">Correo Electrónico</label>
                       <input type="email" class="form-control" id="email_" name="email_" required>
                     </div>
                     <div class="mb-3">

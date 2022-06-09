@@ -1,13 +1,12 @@
 @import url(./variables.css);
 /* BASIC */
 
-html {
-    background-color: var(--shadow-color-primary);
-  }
-  
   .body-login{
     font-family: "Poppins", sans-serif;
     height: 100vh;
+    background-image: url(https://th.bing.com/th/id/R.238d7eeadabc5c7099f9c494cc90c71e?rik=iTP4tvSAKFB%2bzQ&riu=http%3a%2f%2fhausarzt-zeier.de%2ffiles%2fvision%2fimg%2fheader%2fhome1.jpg&ehk=2ycCp4Gaebfx3vR23woK1lN%2f0XVJAblJox5vKtvKhLI%3d&risl=&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
       
   /* STRUCTURE */
@@ -35,14 +34,26 @@ html {
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
   }
+  .form__logo{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
   .form__logo-image{
-    transform: scale(0.8);
+    width: 80%;
     transition: var(--all-transitions);
   }
   .form__logo-image:hover{
     box-shadow: 0 0 0.50rem 0 var(--shadow-color-primary),
     0 0 0.75rem var(--shadow-color-primary);
   }
+  .login__container{
+    display: flex;
+    justify-content: center;
+  }
+  .login{
+    font-weight: 800;
+  }  
   
   #formFooter {
     background-color: #f6f6f6;
@@ -53,6 +64,9 @@ html {
     border-radius: 0 0 10px 10px;
   }  
   
+  .modal-body{
+    font-weight: 700;
+  }
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
@@ -99,5 +113,9 @@ html {
   input[type=text]:placeholder {
     color: #cccccc;
   }
-  
+  @media (max-width:370px){
+    input[type=button], input[type=submit], input[type=reset]  {
+      padding: 15px 5px;
+    }
+  }
   
