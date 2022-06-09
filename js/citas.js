@@ -1,7 +1,7 @@
 
 'use strict';
 
-let URL_BASE="http://localhost:8082/";
+let URL_BASE="https://proyecto-clinica.herokuapp.com/";
 let idCita=0;
 let idPaciente=0;
 let idUsuario=1;
@@ -86,6 +86,20 @@ const getFormDataRegistro = () => {
     const fecha = documentformCitaRegistro['fecha_'].value;
     const hora = documentformCitaRegistro['hora_'].value;
 
+   /* let fecha_formateada = new Date(fecha);
+
+    let day = fecha_formateada.getDate()+2;
+    let month = fecha_formateada.getMonth() + 1;
+    let year = fecha_formateada.getFullYear();
+
+    if(month < 10){
+        fecha_formateada=`${year}-0${month}-${day}`;
+      }else{
+        fecha_formateada=`${year}-${month}-${day}`;
+      }
+    
+    fecha=fecha_formateada;
+    console.info(fecha_formateada);*/
     return ({ id, doctor, especialidad, fecha, hora });
 
   };
@@ -109,6 +123,20 @@ const getFormData = () => {
     const especialidad = documentformCita['especialidad'].value;
     const fecha = documentformCita['fecha'].value;
     const hora = documentformCita['hora'].value;
+
+   /* let fecha_formateada = new Date(fecha);
+
+    let day = fecha_formateada.getDate()+2;
+    let month = fecha_formateada.getMonth() + 1;
+    let year = fecha_formateada.getFullYear();
+
+    if(month < 10){
+        fecha_formateada=`${year}-0${month}-${day}`;
+      }else{
+        fecha_formateada=`${year}-${month}-${day}`;
+      }
+    
+    fecha=fecha_formateada;*/
 
     return ({ id, doctor, especialidad, fecha, hora });
 
@@ -194,7 +222,7 @@ const deleteCita=  ()=>{
 
 
     swalWithBootstrapButtons.fire({
-        title: 'Deseas eliminar este registro?',
+        title: 'Deseas eliminar esta cita?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Si, eliminar',
@@ -307,6 +335,15 @@ const createCita= async ()=>{
 
 
 const documentReady = () => {
+
+    const queryString = window.location.search;
+    console.log({queryString});
+
+    const urlParams = new URLSearchParams(queryString);
+    idUsuario = urlParams.get('id')
+    console.log(idUsuario);
+
+
     getUsuario(idUsuario);
     getMedicos();
     getEspecialidades();
@@ -333,13 +370,20 @@ const documentReady = () => {
     reverseButtons: true
     }).then((result) => {
     if (result.isConfirmed) {
+
         swalWithBootstrapButtons.fire(
         'Cerrando Sesion',
         '',
         'success'
-        );
+        ).then((result)=>{
+            if(result.isConfirmed){
 
+                window.history.back();
+                window.history.go(-1);
+                window.location.replace(`./Login.html`);
 
+            }
+        });
     } 
     });
 
