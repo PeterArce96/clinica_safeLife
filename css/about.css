@@ -26,6 +26,12 @@
     text-align: justify;
     font-size: 1rem;
 }
+.display-block{
+    display: block;
+}
+.about__description-p-strong{
+    font-weight: 700;
+}
 .about__description-img{
     width: 100%;
     transition: var(--all-transitions);
@@ -56,6 +62,7 @@
         margin: 0 0 2rem;
         gap: 2rem;
     }
+    
     .about__title{
         font-weight: 700;
         text-align: left;
