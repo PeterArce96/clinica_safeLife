@@ -46,7 +46,7 @@
         <section class="filters" id="filters">
             <div class="filter-container">
                 <h3 class="filters__title">Busca a tu médico:</h3>
-                <div class="d-flex my-4 col-12 gap-2">
+                <div class="d-flex my-4 col-12 filters__filters-container">
                     <select class="form-select rounded-pill" aria-label="Default select example" id="cmbSedes">
                         <option value="" selected>Todas las sedes</option>
                     </select>
@@ -54,7 +54,7 @@
                         <option value="" selected>Todas las especialidades</option>
                     </select>
                     <input type="text" class="form-control rounded-pill" placeholder="Nombre" id="txtNombreMedico" aria-label="Username">
-                    <button type="button" class="btn btn-primary rounded-pill col-2" id="btnBuscar">Buscar</button>
+                    <button type="button" class="btn btn-primary rounded-pill" id="btnBuscar">Buscar</button>
                 </div>     
             </div>  
         </section>
@@ -70,7 +70,7 @@
         <section class="pagination">
             <div class="pagination-container">
                 <hr class="pagination__limit">
-                <div class="d-flex my-4 col-12 gap-2">
+                <div class="d-flex my-4 col-12 gap-2 pagination__container-options">
                         <h5 class="pagination-mostrar">Mostrar: </h5>
                         <select class="form-select rounded-pill"aria-label="Default select example">
                             <option selected>12</option>
@@ -80,7 +80,6 @@
                         </select>
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>

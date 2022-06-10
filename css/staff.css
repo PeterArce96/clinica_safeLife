@@ -4,7 +4,6 @@
     background-color: var(--background-color-secondary);
 }
 .filter-container{
-    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -12,10 +11,18 @@
     padding: var(--padding-container);
     margin: auto;
 }
+.filters__filters-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
 .filters__title{
-    padding: 0 1rem;
+    padding: 0;
     font-size: 26px;
     margin: 0;
+    text-align: center;
     font-family: 'latoblack',sans-serif;
     color: var(--text-color);
     text-shadow: 0 0 0.125rem var(--shadow-color-primary),
@@ -45,7 +52,7 @@
 }
 .card-text{
     margin: 0 4px;
-    color: #9b61de;
+    color: var(--text-color);
 }
 .card{
     box-shadow: 0 5px 20px var(--box-shadow-color);
@@ -68,6 +75,7 @@
 }
 .pagination-container{
     position: relative;
+    padding: 0 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -75,24 +83,44 @@
     max-width: var(--max-width-container);
     margin: auto;
 }
+.pagination__container-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
 .pagination-mostrar{
     margin: 0;
     position: relative;
-    top: 5px;
     color: var(--text-color);
 }
 .pagination__limit{
     color: var(--text-color);
 }
-@media(max-width: 854px){
-    .directory-container{
-        justify-content: center;
+@media(min-width: 854px){
+    .filters__title{
+        text-align: left;
     }
-    .directory__title{
-        font-size: 2rem;
+    .pagination-mostrar{
+        top: 0;
+        font-size: 18px;
+    }
+    .filters__filters-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    .pagination__container-options{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
     }
     .pagination-mostrar{
         top: 8px;
-        font-size: 18px;
     }
 }
