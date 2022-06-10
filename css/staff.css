@@ -1,0 +1,98 @@
+
+.filters{
+    padding: 5rem 0 0;
+    background-color: var(--background-color-secondary);
+}
+.filter-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width-container);
+    padding: var(--padding-container);
+    margin: auto;
+}
+.filters__title{
+    padding: 0 1rem;
+    font-size: 26px;
+    margin: 0;
+    font-family: 'latoblack',sans-serif;
+    color: var(--text-color);
+    text-shadow: 0 0 0.125rem var(--shadow-color-primary),
+    0 0 0.5rem var(--shadow-color-primary);
+    font-weight: 700;
+}
+.d-flex .btn{
+    font-weight: 700;
+}
+.d-flex .btn:hover{
+    box-shadow: 0 5px 20px var(--box-shadow-color);
+}
+.doctors{
+    padding: var(--padding-section);
+    background-color: var(--background-color-secondary);
+}
+.doctors-container{
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding:var(--padding-container);
+}
+
+.card-title{
+    color: var(--text-color);
+    text-shadow: 0 0 0.125rem var(--shadow-color-primary),
+    0 0 0.5rem var(--shadow-color-primary);
+}
+.card-text{
+    margin: 0 4px;
+    color: #9b61de;
+}
+.card{
+    box-shadow: 0 5px 20px var(--box-shadow-color);
+}
+.card .card-body{
+    padding: 1rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--background-color-primary);
+}
+.card-body p::before{
+    content: "• ";
+}
+
+.pagination{
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color-secondary);
+}
+.pagination-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+.pagination-mostrar{
+    margin: 0;
+    position: relative;
+    top: 5px;
+    color: var(--text-color);
+}
+.pagination__limit{
+    color: var(--text-color);
+}
+@media(max-width: 854px){
+    .directory-container{
+        justify-content: center;
+    }
+    .directory__title{
+        font-size: 2rem;
+    }
+    .pagination-mostrar{
+        top: 8px;
+        font-size: 18px;
+    }
+}

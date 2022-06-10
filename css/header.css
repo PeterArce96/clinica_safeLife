@@ -147,7 +147,7 @@
     font-size: 1.5rem;
 }
 .header-nav_menu-link:hover{
-    transform: scale(1.08);
+    transform: scale(1.05);
     color: var(--shadow-color-primary);
 }
 @media(min-width: 854px){

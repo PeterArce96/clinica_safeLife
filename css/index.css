@@ -6,6 +6,7 @@
 @import url(./contact.css);
 @import url(./footer.css);
 @import url(./variables.css);
+@import url(./staff.css);
 
 .body{
     font-family: 'Josefin Sans', sans-serif;
